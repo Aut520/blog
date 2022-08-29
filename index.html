@@ -167,6 +167,46 @@
             </div>
         </footer>
     </div>
+    <script language="javascript">
+function click() {
+if (event.button==2) {
+alert('想右键查看源代码？兄弟，别想啦，收藏本站aut520.tk')
+}
+}
+document.onmousedown=click
+
+</script>
+<script>
+document.onkeydown = function(){
+    if(window.event && window.event.keyCode == 123) {
+        alert("右键不成还想直接f12偷代码？告诉你这是不可能的！兄弟这么执着吗？推广本站就给你好了,主站地址：aut520.tk");
+        event.keyCode=0;
+        event.returnValue=false;
+    }
+    if(window.event && window.event.keyCode == 13) {
+        window.event.keyCode = 505;
+    }
+    if(window.event && window.event.keyCode == 8) {
+        alert(str+"\n请使用Del键进行字符的删除操作！");
+        window.event.returnValue=false;
+    }
+}
+document.oncontextmenu = function (event){
+    if(window.event){
+    event = window.event;
+    }
+    try{
+    var the = event.srcElement;
+        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        return false;
+        }
+        return true;
+    }
+    catch (e){
+        return false;
+    }
+}
+</script>
 </body>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/clipboard.min.js"></script>
